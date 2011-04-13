@@ -1,3 +1,16 @@
+*** Kangaroo5383 Repository Notes *****
+Repository is organized using this git branching model: http://nvie.com/posts/a-successful-git-branching-model/
+
+master - "production ready"
+develop - in development and may be unstable
+feature/* - a feature that is in development
+
+When a feature is completed, it will be merged into develop, after it is ready for prime time it will be released on master.
+
+
+
+***************************************
+
 The code hosted here on github is for ongoing development and contributions  and may contain untested code.  Please use a stable release from http://getsharekit.com for use in your own app.
 
 ***
