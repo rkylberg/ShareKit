@@ -34,6 +34,7 @@
 
 @protocol SHKSharerDelegate
 
+@optional
 - (void)sharerStartedSending:(SHKSharer *)sharer;
 - (void)sharerFinishedSending:(SHKSharer *)sharer;
 - (void)sharer:(SHKSharer *)sharer failedWithError:(NSError *)error shouldRelogin:(BOOL)shouldRelogin;
