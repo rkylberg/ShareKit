@@ -67,7 +67,8 @@
 }
 
 - (void)promptAuthorization
-{		
+{	
+	[self restoreAccessToken];
 	[self tokenRequest];
 }
 

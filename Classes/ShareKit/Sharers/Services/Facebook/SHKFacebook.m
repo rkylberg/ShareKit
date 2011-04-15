@@ -19,7 +19,7 @@ static NSString *const SHKFacebookExpirationDate = @"SHKFacebookExpirationDate";
 static NSString *const SHKFacebookPendingItem = @"SHKFacebookPendingItem";
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"offline_access", nil];
 	}
 	
