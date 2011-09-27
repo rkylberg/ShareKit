@@ -92,7 +92,7 @@ static NSString *const SHKFacebookPendingItem = @"SHKFacebookPendingItem";
 	Facebook *fb = [[[Facebook alloc] initWithAppId:SHKFacebookAppId] autorelease];
 	fb.accessToken = [[[[self alloc] init] autorelease] getAuthValueForKey:SHKFacebookAccessToken];
 	fb.expirationDate = (NSDate*)[[NSUserDefaults standardUserDefaults] objectForKey:SHKFacebookExpirationDate];
-	[fb logout:self];
+	[fb logout:(id<FBSessionDelegate>)self];
 	
 	[SHK removeAuthValueForKey:SHKFacebookAccessToken forSharer:[self sharerId]];
 	[[NSUserDefaults standardUserDefaults] removeObjectForKey:SHKFacebookExpirationDate];
