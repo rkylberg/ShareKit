@@ -179,14 +179,16 @@ BOOL SHKinit;
 	if (currentView != nil)
 	{
 		// Dismiss the modal view
-		if ([currentView parentViewController] != nil)
-		{
+    // NOTE: Note that as of iOS 5.0 [currentView parentViewController] no longer will return the presenting view controller;
+    //       therefore, the else must also call dismissModalViewControllerAnimated on currentView.
+		if ([currentView parentViewController] != nil) {
 			self.isDismissingView = YES;
 			[[currentView parentViewController] dismissModalViewControllerAnimated:animated];
-		}
-		
-		else
+
+		} else {
+      [currentView dismissModalViewControllerAnimated:animated];
 			self.currentView = nil;
+    }
 	}
 }
 
